@@ -1,0 +1,22 @@
+{
+  "name": "marki-journal",
+  "version": "1.0.0",
+  "description": "POC for a marki-style journal",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.2",
+    "glob": "^6.0.4",
+    "hyperscript": "^1.4.7",
+    "mkdirp": "^0.5.1",
+    "remark": "^3.2.2"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
+  }
+}
