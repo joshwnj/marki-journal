@@ -63,7 +63,7 @@ async.parallel(parseTasks, function (err, res) {
   render(data, opts, function (err) {
     if (err) { throw err }
 
-    conosle.log('ok')
+    console.log('ok')
   })
 })
 
