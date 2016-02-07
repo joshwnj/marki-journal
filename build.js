@@ -2,7 +2,6 @@
 
 const async = require('async')
 const glob = require('glob')
-const path = require('path')
 
 const parseTopicFile = require('./lib/parse-topic-file')
 const parseNoteFile = require('./lib/parse-note-file')
