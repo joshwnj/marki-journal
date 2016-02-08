@@ -6,6 +6,7 @@ const glob = require('glob')
 const parseTopicFile = require('./lib/parse-topic-file')
 const parseNoteFile = require('./lib/parse-note-file')
 const render = require('./lib/render')
+const validate = require('./lib/validate')
 
 module.exports = function build (opts, cb) {
   const parseTasks = []
@@ -43,7 +44,12 @@ module.exports = function build (opts, cb) {
       topics: res[1]
     }
 
-    // TODO: validate
+    const errors = validate(data)
+    if (errors.length) {
+      const err = new Error('validation errors')
+      err.errors = errors
+      return cb(err)
+    }
 
     render(data, opts, cb)
   })
