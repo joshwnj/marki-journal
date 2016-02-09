@@ -35,7 +35,7 @@ module.exports = function build (opts, cb) {
     })
   })
 
-  // parse and render
+  // parse, validate, render
   async.parallel(parseTasks, (err, res) => {
     if (err) { return cb(err) }
 
