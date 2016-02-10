@@ -24,13 +24,13 @@ const opts = {
 build(opts, err => {
   if (err) {
     switch (err.message) {
-    case 'validation errors':
-      console.error('[ERR] %s', err.message)
-      err.errors.forEach(err => console.error('- %s', err.message))
-      break
+      case 'validation errors':
+        console.error('[ERR] %s', err.message)
+        err.errors.forEach(err => console.error('- %s', err.message))
+        break
 
-    default:
-      throw err
+      default:
+        throw err
     }
     process.exit(1)
   }
