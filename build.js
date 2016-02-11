@@ -30,8 +30,13 @@ function loadTopics (dir, cb) {
 module.exports = function build (opts, cb) {
   const tasks = []
 
-  // load src files
-  tasks.push(loadNotes.bind(null, opts.srcNotesDir))
+  // notes are optional
+  if (opts.srcNotesDir) {
+    tasks.push(loadNotes.bind(null, opts.srcNotesDir))
+  } else {
+    tasks.push((cb) => cb(null, []))
+  }
+
   tasks.push(loadTopics.bind(null, opts.srcTopicsDir))
 
   // parse, validate, render

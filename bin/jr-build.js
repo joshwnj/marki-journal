@@ -1,27 +1,44 @@
 #!/usr/bin/env node
 'use strict'
 
+const minimist = require('minimist')
 const path = require('path')
 
 const build = require('../build')
 
-const journalDir = process.argv[2] || process.cwd()
-const srcDir = path.join(journalDir, 'src')
-const srcTopicsDir = path.join(srcDir, 'topics')
-const srcNotesDir = path.join(srcDir, 'notes')
+const argv = minimist(process.argv.slice(2))
 
-const distDir = path.join(journalDir, 'dist')
-const distTopicsDir = path.join(distDir, 'topics')
-const distNotesDir = path.join(distDir, 'notes')
+// docs mode
+const topicsDir = argv.docs || argv.d
+const outDir = argv.out || argv.o
+if (topicsDir) {
+  const opts = {
+    srcTopicsDir: topicsDir,
+    distTopicsDir: outDir
+  }
 
-const opts = {
-  srcTopicsDir: srcTopicsDir,
-  srcNotesDir: srcNotesDir,
-  distTopicsDir: distTopicsDir,
-  distNotesDir: distNotesDir
+  build(opts, handleResult)
+} else { // journal mode
+  const journalDir = process.argv[2] || process.cwd()
+  const srcDir = path.join(journalDir, 'src')
+  const srcTopicsDir = path.join(srcDir, 'topics')
+  const srcNotesDir = path.join(srcDir, 'notes')
+
+  const distDir = path.join(journalDir, 'dist')
+  const distTopicsDir = path.join(distDir, 'topics')
+  const distNotesDir = path.join(distDir, 'notes')
+
+  const opts = {
+    srcTopicsDir: srcTopicsDir,
+    srcNotesDir: srcNotesDir,
+    distTopicsDir: distTopicsDir,
+    distNotesDir: distNotesDir
+  }
+
+  build(opts, handleResult)
 }
 
-build(opts, err => {
+function handleResult (err) {
   if (err) {
     switch (err.message) {
       case 'validation errors':
@@ -36,4 +53,4 @@ build(opts, err => {
   }
 
   console.log('ok')
-})
+}

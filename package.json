@@ -8,7 +8,9 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "tape lib/*.test.js"
+    "test": "tape lib/*.test.js",
+    "build-docs": "./bin/jr-build.js -d docs -o docs-dist",
+    "deploy-docs": "npm run build-docs && gh-pages -d docs-dist -m \"Updates --skip-ci\""
   },
   "author": "joshwnj",
   "license": "MIT",
@@ -16,12 +18,14 @@
     "async": "^1.5.2",
     "glob": "^6.0.4",
     "hyperscript": "^1.4.7",
+    "minimist": "^1.1.1",
     "mkdirp": "^0.5.1",
     "remark": "^3.2.2",
     "remark-autolink-headings": "^2.0.0",
     "remark-slug": "^4.0.0"
   },
   "devDependencies": {
+    "gh-pages": "git://github.com/markdalgleish/gh-pages#cli-message",
     "standard": "^5.4.1"
   }
 }

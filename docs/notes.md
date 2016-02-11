@@ -1,5 +1,11 @@
 # Notes
 
+## Notes are optional
+
+Notes come into play when using "journal mode". This means you have a `topics/` directory for organising info, and a `notes/` directory for comments or untructured notes waiting to be refactored.
+
+You can run in "docs mode" which means you just need to specify a single directory containing topics.
+
 ## Notes can't be linked to
 
 Because we link to headings, and headings are optional for notes.
