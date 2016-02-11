@@ -12,8 +12,8 @@ To link to a subheading of the current topic we can do `[./Another subheading][]
 
 ## Broken links cause a build error
 
-## Topics are rendered with an "Incoming Links" section at the end
+## Topics are rendered with an incoming links section at the end
 
 This is a list of links to any other topic that linked to this one, so that we can see & navigate cross-references.
 
-## Don't display the "Incoming Links" section if there is nothing linking to the topic
+## Don't display the incoming links section if there is nothing linking to the topic
