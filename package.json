@@ -1,6 +1,6 @@
 {
   "name": "marki-journal",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "POC for a marki-style journal",
   "main": "index.js",
   "bin": {
