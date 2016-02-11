@@ -5,7 +5,7 @@ const path = require('path')
 
 const build = require('../build')
 
-const journalDir = process.cwd()
+const journalDir = process.argv[2] || process.cwd()
 const srcDir = path.join(journalDir, 'src')
 const srcTopicsDir = path.join(srcDir, 'topics')
 const srcNotesDir = path.join(srcDir, 'notes')
