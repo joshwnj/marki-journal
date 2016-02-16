@@ -12,6 +12,11 @@ const argv = minimist(process.argv.slice(2))
 const topicsDir = argv.docs || argv.d
 const outDir = argv.out || argv.o
 if (topicsDir) {
+  if (!outDir) {
+    console.error('Output dir (-o, --out) is required in docs mode');
+    process.exit(1)
+  }
+
   const opts = {
     srcTopicsDir: topicsDir,
     distTopicsDir: outDir
