@@ -9,8 +9,10 @@
   "scripts": {
     "lint": "standard",
     "test": "tape lib/*.test.js",
-    "build-docs": "./bin/jr-build.js -d docs -o docs-dist",
-    "deploy-docs": "npm run build-docs && gh-pages -d docs-dist -m \"Updates --skip-ci\""
+    "clean-docs": "rm -rf docs",
+    "prebuild-docs": "npm run clean-docs && mkdir docs",
+    "build-docs": "./bin/jr-build.js -d docs-src -o docs",
+    "deploy-docs": "npm run build-docs && gh-pages -d docs -m \"Updates --skip-ci\""
   },
   "author": "joshwnj",
   "license": "MIT",
