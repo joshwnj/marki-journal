@@ -7,17 +7,13 @@ const build = require('./build')
 const journalDir = process.cwd()
 const srcDir = path.join(journalDir, 'src')
 const srcTopicsDir = path.join(srcDir, 'docs')
-//const srcNotesDir = path.join(srcDir, 'topics')
 
 const distDir = path.join(journalDir, 'dist')
 const distTopicsDir = path.join(distDir, 'topics')
-//const distNotesDir = path.join(distDir, 'notes')
 
 const opts = {
   srcTopicsDir: srcTopicsDir,
-//  srcNotesDir: srcNotesDir,
-  distTopicsDir: distTopicsDir,
-//  distNotesDir: distNotesDir
+  distTopicsDir: distTopicsDir
 }
 
 build(opts, err => {

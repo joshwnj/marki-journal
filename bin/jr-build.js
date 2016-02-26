@@ -13,7 +13,7 @@ const topicsDir = argv.docs || argv.d
 const outDir = argv.out || argv.o
 if (topicsDir) {
   if (!outDir) {
-    console.error('Output dir (-o, --out) is required in docs mode');
+    console.error('Output dir (-o, --out) is required in docs mode')
     process.exit(1)
   }
 
