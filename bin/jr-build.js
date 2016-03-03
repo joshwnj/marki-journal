@@ -19,7 +19,8 @@ if (topicsDir) {
 
   const opts = {
     srcTopicsDir: topicsDir,
-    distTopicsDir: outDir
+    distTopicsDir: outDir,
+    format: 'md'
   }
 
   build(opts, handleResult)
@@ -37,7 +38,8 @@ if (topicsDir) {
     srcTopicsDir: srcTopicsDir,
     srcNotesDir: srcNotesDir,
     distTopicsDir: distTopicsDir,
-    distNotesDir: distNotesDir
+    distNotesDir: distNotesDir,
+    format: 'html'
   }
 
   build(opts, handleResult)
