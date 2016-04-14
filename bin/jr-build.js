@@ -50,7 +50,7 @@ function handleResult (err) {
     switch (err.message) {
       case 'validation errors':
         console.error('[ERR] %s', err.message)
-        err.errors.forEach(err => console.error('- %s', err.message))
+        err.errors.forEach((err) => console.error('- %s', err.message))
         break
 
       default:
