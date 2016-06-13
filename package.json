@@ -22,7 +22,7 @@
     "hyperscript": "^1.4.7",
     "minimist": "^1.1.1",
     "mkdirp": "^0.5.1",
-    "remark": "^4.2.2",
+    "remark": "^5.0.0",
     "remark-autolink-headings": "^3.0.0",
     "remark-slug": "^4.0.0"
   },
