@@ -24,7 +24,7 @@
     "mkdirp": "^0.5.1",
     "remark": "^5.0.0",
     "remark-autolink-headings": "^3.0.1",
-    "remark-slug": "^4.1.1"
+    "remark-slug": "^4.2.0"
   },
   "devDependencies": {
     "gh-pages": "git://github.com/markdalgleish/gh-pages#cli-message",
