@@ -17,7 +17,7 @@
   "author": "joshwnj",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.0.0",
+    "async": "^2.0.1",
     "glob": "^7.0.5",
     "hyperscript": "^1.4.7",
     "minimist": "^1.1.1",
