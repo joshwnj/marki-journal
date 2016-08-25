@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.1",
-    "glob": "^7.0.5",
+    "glob": "^7.0.6",
     "hyperscript": "^1.4.7",
     "minimist": "^1.1.1",
     "mkdirp": "^0.5.1",
