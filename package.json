@@ -29,6 +29,6 @@
   "devDependencies": {
     "gh-pages": "git://github.com/markdalgleish/gh-pages#cli-message",
     "standard": "^8.4.0",
-    "tape": "^4.6.2"
+    "tape": "^4.6.3"
   }
 }
